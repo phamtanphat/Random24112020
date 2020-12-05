@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -40,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
 //        Random trong khoảng từ 0 - 5
 //        double result4 = Math.round(Math.random() * 5);
 //        Log.d("BBB",String.valueOf(result4));
+
+
+        // 5 -> 10
+        Random random = new Random();
+        int result5 = random.nextInt(10 - 5 + 1) + 5;
+        Log.d("BBB",String.valueOf(result5));
 
     }
 }
