@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewBieuThuc"
         android:gravity="center"
         android:layout_weight="3"
         android:layout_gravity="center"
@@ -22,6 +23,7 @@
         android:layout_height="0dp" />
 
    <TextView
+       android:id="@+id/textViewKetQua"
        android:gravity="center"
        android:layout_weight="3"
        android:layout_gravity="center"
@@ -38,10 +40,12 @@
        android:layout_width="match_parent"
        android:layout_height="0dp">
       <ImageButton
+          android:id="@+id/imageButtonDung"
           android:src="@drawable/ic_done"
           android:layout_width="200dp"
           android:layout_height="200dp"/>
       <ImageButton
+          android:id="@+id/imageButtonSai"
           android:src="@drawable/ic_error"
           android:layout_width="200dp"
           android:layout_height="200dp"/>
