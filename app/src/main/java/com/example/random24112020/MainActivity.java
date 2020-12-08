@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView mTvBieuThuc,mTvKetQua;
     ImageButton mImgButtonDung,mImgButtonSai;
     int mSothu1,mSothu2,mKetqua,mPheptinh;
+    boolean mRandomKetqua = false;
     Random mRandom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mSothu1 = mRandom.nextInt(10) + 1 ;
         mSothu2 = mRandom.nextInt(10) + 1 ;
         mPheptinh = mRandom.nextInt(4) + 1 ;
+        mRandomKetqua = mRandom.nextBoolean();
         // 1 : Cong , 2 : Tru , 3 : Nhan , 4 : Chia
 
         switch (mPheptinh){
@@ -62,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
                 mTvBieuThuc.setText(mSothu1 + " / " + mSothu2);
                 break;
         }
+
+        if (mRandomKetqua == false){
+            mKetqua += mRandom.nextInt(5) + 1;
+        }
+
         mTvKetQua.setText(" = " + mKetqua);
 
     }
