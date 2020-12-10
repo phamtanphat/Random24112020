@@ -76,7 +76,22 @@ public class MainActivity extends AppCompatActivity {
         mImgButtonDung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Toast.makeText(MainActivity.this,"Nút đúng",Toast.LENGTH_LONG).show();
+                if (mRandomKetqua == true){
+                    Toast.makeText(MainActivity.this, "Chính xác!!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "Sai rồi!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        mImgButtonSai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mRandomKetqua == false){
+                    Toast.makeText(MainActivity.this, "Chính xác!!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "Sai rồi!!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
