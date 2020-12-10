@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -71,5 +72,20 @@ public class MainActivity extends AppCompatActivity {
 
         mTvKetQua.setText(" = " + mKetqua);
 
+        // Su kien Click cua imageButton
+        mImgButtonDung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Toast.makeText(MainActivity.this,"Nút đúng",Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        // Khi click vao imageviewButton
+        // Kiem tra view co ton tai hay khong
+        // Kieu tra vung nho cua view da duoc khoi tao chua
+
+        // Thuc hien su kien click
     }
 }
+
